@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="MySQL" database="community" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="article">
+      <Drawing expanded="true" location="12,392" dimensions="209,247" />
+      <Columns>
+        <Column name="A_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="A_Topic" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="A_Content" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="text" size="65535" />
+        </Column>
+        <Column name="A_RevNum" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="A_CreTime" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="A_LastReUser" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="A_LastReTime" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="A_IsTop" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bit" size="1" />
+        </Column>
+        <Column name="U_ID" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="S_ID" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="A_IsOpen" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bit" size="1" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="identify">
+      <Drawing expanded="true" location="377,389" dimensions="161,69" />
+      <Columns>
+        <Column name="I_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="I_Name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="revert">
+      <Drawing expanded="true" location="22,-4" dimensions="188,146" />
+      <Columns>
+        <Column name="R_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="R_Content" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="text" size="65535" />
+        </Column>
+        <Column name="R_CreTime" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="A_ID" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="S_ID" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="U_ID" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="subcommunity">
+      <Drawing expanded="true" location="152,189" dimensions="188,149" />
+      <Columns>
+        <Column name="S_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="S_Name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="S_Desc" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="S_ArtNum" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="S_CreTime" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="S_Status" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bit" size="1" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="user">
+      <Drawing expanded="true" location="358,-8" dimensions="189,268" />
+      <Columns>
+        <Column name="U_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="U_Account" primary_key="false" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="U_Passwd" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="char" size="6" />
+        </Column>
+        <Column name="U_Name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="U_Gender" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bit" size="1" />
+        </Column>
+        <Column name="U_Age" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="U_Email" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="U_Question" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="U_Answer" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="U_Image" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="U_Identify" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="U_IsLocked" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bit" size="1" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="article_ibfk_4">
+      <Details primary_table="subcommunity" foreign_table="article">
+        <PrimaryKeys>
+          <ColumnName name="S_ID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="S_ID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="article_ibfk_5">
+      <Details primary_table="user" foreign_table="article">
+        <PrimaryKeys>
+          <ColumnName name="U_ID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="U_ID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="revert_ibfk_4">
+      <Details primary_table="article" foreign_table="revert">
+        <PrimaryKeys>
+          <ColumnName name="A_ID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="A_ID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="revert_ibfk_6">
+      <Details primary_table="user" foreign_table="revert">
+        <PrimaryKeys>
+          <ColumnName name="U_ID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="U_ID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="revert_ibfk_5">
+      <Details primary_table="subcommunity" foreign_table="revert">
+        <PrimaryKeys>
+          <ColumnName name="S_ID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="S_ID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="user_ibfk_1">
+      <Details primary_table="identify" foreign_table="user">
+        <PrimaryKeys>
+          <ColumnName name="I_ID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="U_Identify" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

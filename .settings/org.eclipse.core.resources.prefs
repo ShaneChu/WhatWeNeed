@@ -1,0 +1,6 @@
+#Thu Nov 26 20:46:37 CST 2009
+eclipse.preferences.version=1
+encoding//WebRoot/register.jsp=UTF-8
+encoding//src/shane/dao/mysql/impl/UserDAO.java=UTF-8
+encoding//src/shane/view/command/impl/RegisterCommand.java=UTF-8
+encoding/community.sql=UTF-8
